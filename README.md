@@ -1,3 +1,8 @@
+# ![Colaberry School of Data Analytics] (http://www.colaberry.com/assets/img/colaberrylogosmall.png) + ![TPC] (http://www.tpc.org/tpc_common_library/images/TPC_logo.gif) + ![Hortonworks Data Platform](http://hortonworks.com/wp-content/themes/hortonworks/images/layout/header/hortonworks-logo.png) + ![Google Cloud Platform](https://cloud.google.com/_static/images/gcp-logo.png) + ![Hive] (https://hive.apache.org/images/hive_logo_medium.jpg)
+
+
+
+
 hive-testbench
 ==============
 
