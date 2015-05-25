@@ -28,13 +28,17 @@ Install and Setup
 All of these steps should be carried out on your Hadoop cluster.
 
 Step 1: Prepare your environment.
+
 In addition to Hadoop and Hive, before you begin ensure gcc is installed and available on your system path. If you system does not have it, install it using the fallowing commands.
+
 Command: sudo yum install gcc*
 
 
  
 Step 2: Decide which test suite(s) you want to use.
+
 hive-testbench comes with data generators and sample queries based on both the TPC-DS and TPC-H benchmarks. You can choose to use either or both of these benchmarks for experiementation. More information about these benchmarks can be found in the fallowing link.
+
  http://hortonworks.com/blog/benchmarking-apache-hive-13-enterprise-hadoop/
 
 Step 3: Download the code for hive-testbench from git hub.
@@ -93,6 +97,7 @@ Step 6: Setup mapreduce path.
  
 
 	6.F.	Change the Owner ship and Permissions for /hdp/apps/2.2.4.2-2/mapreduce.
+	
 		6.F.1.	Changing the ownership for /hdp
 			Command: sudo -u hdfs hdfs dfs -chown -R hdfs:hadoop /hdp
  
