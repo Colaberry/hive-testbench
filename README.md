@@ -39,7 +39,7 @@ hive-testbench comes with data generators and sample queries based on both the T
 
 Step 3: Download the code for hive-testbench from git hub.
 
-	3.A.	If you do not install git on your machine, use the following command to install it.
+	3.A.	If you do not install git on your machine,use the following command to install it.
 
 		Command: $sudo yum install git
 
@@ -64,6 +64,7 @@ Command: ls -l
 
  
 Step 5: Compile and package the appropriate data generator.
+
 	5.A.	For TPC-DS, ./tpcds-build.sh downloads, compiles and packages the TPC-DS data generator. 
 		Command: ./tpcds-build.sh
  
@@ -73,6 +74,7 @@ Step 5: Compile and package the appropriate data generator.
  
  
 Step 6: Setup mapreduce path.
+
 	6.A.	Change the directory to home from hive-testbench.
 		Command: cd
  
@@ -104,12 +106,15 @@ Step 6: Setup mapreduce path.
 		Command: exit
  
 Step 7: Decide how much data you want to generate.
+
 You need to decide on a "Scale Factor" which represents how much data you will generate. Scale Factor roughly translates to gigabytes, so a Scale Factor of 100 is about 100 gigabytes and one terabyte is Scale Factor 1000. Decide how much data you want and keep it in mind for the next step. If you have a cluster of 4-10 nodes or just want to experiment at a smaller scale, scale 1000 (1 TB) of data is a good starting point. If you have a large cluster, you may want to choose Scale 10000 (10 TB) or more. The notion of scale factor is similar between TPC-DS and TPC-H.
 If you want to generate a large amount of data, you should use Hive 13 or later. Hive 13 introduced an optimization that allows far more scalable data partitioning. Hive 12 and lower will likely crash if you generate more than a few hundred GB of data and tuning around the problem is difficult. You can generate text or RCFile data in Hive 13 and use it in multiple versions of Hive.
 In this case, My suggestion is do not do it more then 10(10GB), otherwise it will take you lots of time for generate and load the data.
 
 Step 8: Generate and load the data.
+
 The scripts tpcds-setup.sh and tpch-setup.sh generate and load data for TPC-DS and TPC-H, respectively. General usage is tpcds-setup.sh scale_factor [directory] or tpch-setup.sh scale_factor [directory]
+
 	8.A.	Change the directory to hive-testbench.
 		Command: cd hive-testbench
  
@@ -130,8 +135,10 @@ The scripts tpcds-setup.sh and tpch-setup.sh generate and load data for TPC-DS a
 
 
 Step 9: Running the Queries.
+
 More than 50 sample TPC-DS queries and all TPC-H queries are included to try. You can use hive, beeline or the SQL tool of your choice. Note that the database is named based on the Data Scale chosen in step 7. At Data Scale 10, your database will be named tpcds_bin_partitioned_orc_10. At Data Scale 1000 it would be named tpcds_bin_partitioned_orc_1000. You can always use the below command to get a list of available databases.
 Command: show databases
+
 	9.A.	Running a sample query in TPC-DS.
 
 		9.A.1.	Change the directory.
